@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1" />
+  <title>Render Dashboard</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <link rel="stylesheet" href="css/custom.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="body-overlay"></div>
+
+    <!-- Sidebar -->
+    <div id="sidebar">
+      <div class="sidebar-header">
+        <h3><span>Laxmi Tiffin</span></h3>
+      </div>
+      <ul class="list-unstyled components">
+        <li class="active">
+          <a href="#" id="dashboardLink"><i class="material-icons">dashboard</i> <span>Dashboard</span></a>
+        </li>
+        <li>
+          <a href="#" id="profileLink"><i class="material-icons">person</i> <span>Profile Management</span></a>
+        </li>
+        <li>
+          <a href="#" id="menuLink"><i class="material-icons">restaurant_menu</i> <span>Menu Management</span></a>
+        </li>
+        <li>
+          <a href="#" id="orderLink"><i class="material-icons">shopping_cart</i> <span>Order Management</span></a>
+        </li>
+        <li>
+          <a href="#" id="analyticsLink"><i class="material-icons">analytics</i> <span>Sales Analytics</span></a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div id="content">
+      <!-- Top Navbar with Hamburger Icon -->
+      <div class="top-navbar">
+        <div class="xd-topbar">
+          <div class="row">
+            <div class="col-2 col-md-1 col-lg-1 order-2 order-md-1 align-self-center">
+              <div class="xp-menubar">
+                <span class="material-icons text-white">signal_cellular_alt</span>
+              </div>
+            </div>
+            
+            <div class="col-md-5 col-lg-3 order-3 order-md-2">
+            </div>
+            
+            <div class="col-10 col-md-6 col-lg-8 order-1 order-md-3">
+              <div class="xp-profilebar text-right">
+                <nav class="navbar p-0">
+                  <ul class="nav navbar-nav flex-row ml-auto">
+                    <li class="dropdown nav-item active">
+                      <a class="nav-link" href="#" data-toggle="dropdown">
+                        <span class="material-icons">notifications</span>
+                        <span class="notification">4</span>
+                      </a>
+                      <ul class="dropdown-menu">
+                        <li><a href="#">You Have 4 New Messages</a></li>
+                        <li><a href="#">You Have 4 New Messages</a></li>
+                        <li><a href="#">You Have 4 New Messages</a></li>
+                        <li><a href="#">You Have 4 New Messages</a></li>
+                      </ul>
+                    </li>
+                    
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">
+                        <span class="material-icons">question_answer</span>
+                      </a>
+                    </li>
+                    
+                    <li class="dropdown nav-item">
+                      <a class="nav-link" href="#" data-toggle="dropdown">
+                        <img src="img/user.jpg" style="width:40px; border-radius:50%;" />
+                        <span class="xp-user-live"></span>
+                      </a>
+                      <ul class="dropdown-menu small-menu">
+                        <li><a href="#">
+                          <span class="material-icons">person_outline</span>
+                          Profile
+                        </a></li>
+                        <li><a href="#">
+                          <span class="material-icons">settings</span>
+                          Settings
+                        </a></li>
+                        <li><a href="#">
+                          <span class="material-icons">logout</span>
+                          Logout
+                        </a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+          </div>
+          
+          <div class="xp-breadcrumbbar text-center">
+            <h4 class="page-title">Dashboard</h4>
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="#">Vishweb</a></li>
+              <li class="breadcrumb-item active" aria-curent="page">Dashboard</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+
+      <!-- Content Sections -->
+      <div id="dashboardContent">
+        <!-- Dashboard Content -->
+        <div class="container mt-4">
+          <h3>Dashboard Overview</h3>
+          <!-- Add dashboard content here -->
+        </div>
+      </div>
+
+      <div id="profileContent" class="content-section" style="display:none;">
+        <!-- Profile Management Content -->
+        <div class="container mt-4">
+          <h3>Profile Management</h3>
+          
+          <!-- Profile Picture Section -->
+          <div class="profile-picture text-center mb-4">
+            <img src="img/user.jpg" class="img-fluid rounded-circle" alt="Profile Picture" style="width: 150px;">
+            <div class="mt-2">
+              <input type="file" id="profilePictureInput" class="form-control-file" />
+              <button class="btn btn-primary mt-2">Upload New Picture</button>
+            </div>
+          </div>
+      
+          <!-- Profile Details Form -->
+          <div class="profile-details">
+            <form>
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <label for="inputName">Full Name</label>
+                  <input type="text" class="form-control" id="inputName" placeholder="Enter your full name">
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="inputEmail">Email Address</label>
+                  <input type="email" class="form-control" id="inputEmail" placeholder="Enter your email">
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="inputPhone">Phone Number</label>
+                <input type="tel" class="form-control" id="inputPhone" placeholder="Enter your phone number">
+              </div>
+              <button type="submit" class="btn btn-primary">Save Changes</button>
+            </form>
+          </div>
+      
+          <!-- Change Password Section -->
+          <div class="change-password mt-4">
+            <h4>Change Password</h4>
+            <form>
+              <div class="form-group">
+                <label for="currentPassword">Current Password</label>
+                <input type="password" class="form-control" id="currentPassword" placeholder="Enter your current password">
+              </div>
+              <div class="form-group">
+                <label for="newPassword">New Password</label>
+                <input type="password" class="form-control" id="newPassword" placeholder="Enter your new password">
+              </div>
+              <div class="form-group">
+                <label for="confirmPassword">Confirm New Password</label>
+                <input type="password" class="form-control" id="confirmPassword" placeholder="Confirm your new password">
+              </div>
+              <button type="submit" class="btn btn-primary">Change Password</button>
+            </form>
+          </div>
+        </div>
+      </div>
+      
+
+      <div id="menuContent" class="content-section" style="display:none;">
+        <!-- Menu Management Content -->
+        <div class="container mt-4">
+          <h3>Manage Menu</h3>
+          
+          <div class="table-wrapper">
+            <div class="table-title">
+              <div class="row">
+                <div class="col-sm-6">
+                  <h2>Menu List</h2>
+                </div>
+                <div class="col-sm-6 text-right">
+                  <a href="#addMenuModal" class="btn btn-success" data-toggle="modal">
+                    <i class="material-icons">&#xE147;</i> <span>Add New Menu Item</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+      
+            <!-- Menu Table -->
+            <table class="table table-striped table-hover">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>Menu Item</th>
+                  <th>Description</th>
+                  <th>Price</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>Paneer Tikka</td>
+                  <td>Spicy grilled paneer cubes.</td>
+                  <td>$10.00</td>
+                  <td>
+                    <a href="#editMenuModal" class="edit" data-toggle="modal">
+                      <i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i>
+                    </a>
+                    <a href="#deleteMenuModal" class="delete" data-toggle="modal">
+                      <i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i>
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>Chicken Biryani</td>
+                  <td>Aromatic rice with chicken.</td>
+                  <td>$12.00</td>
+                  <td>
+                    <a href="#editMenuModal" class="edit" data-toggle="modal">
+                      <i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i>
+                    </a>
+                    <a href="#deleteMenuModal" class="delete" data-toggle="modal">
+                      <i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i>
+                    </a>
+                  </td>
+                </tr>
+                <!-- More rows can be added here -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      
+        <!-- Add Menu Modal -->
+        <div id="addMenuModal" class="modal fade">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <form>
+                <div class="modal-header">
+                  <h4 class="modal-title">Add Menu Item</h4>
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                  <div class="form-group">
+                    <label for="menuItemName">Menu Item Name</label>
+                    <input type="text" class="form-control" id="menuItemName" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="menuItemDescription">Description</label>
+                    <textarea class="form-control" id="menuItemDescription" required></textarea>
+                  </div>
+                  <div class="form-group">
+                    <label for="menuItemPrice">Price</label>
+                    <input type="number" class="form-control" id="menuItemPrice" required>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="submit" class="btn btn-primary">Add Menu Item</button>
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      
+        <!-- Edit Menu Modal -->
+        <div id="editMenuModal" class="modal fade">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <form>
+                <div class="modal-header">
+                  <h4 class="modal-title">Edit Menu Item</h4>
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                  <div class="form-group">
+                    <label for="editMenuItemName">Menu Item Name</label>
+                    <input type="text" class="form-control" id="editMenuItemName" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="editMenuItemDescription">Description</label>
+                    <textarea class="form-control" id="editMenuItemDescription" required></textarea>
+                  </div>
+                  <div class="form-group">
+                    <label for="editMenuItemPrice">Price</label>
+                    <input type="number" class="form-control" id="editMenuItemPrice" required>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="submit" class="btn btn-primary">Update Menu Item</button>
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      
+        <!-- Delete Menu Modal -->
+        <div id="deleteMenuModal" class="modal fade">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <form>
+                <div class="modal-header">
+                  <h4 class="modal-title">Delete Menu Item</h4>
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                  <p>Are you sure you want to delete this menu item?</p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-danger" data-dismiss="modal">Delete</button>
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+
+      <div id="orderContent" class="content-section" style="display:none;">
+        <!-- Order Management Content -->
+        <div class="container mt-4">
+          <h3>Manage Orders</h3>
+          <div class="table-wrapper">
+            <div class="table-title">
+              <div class="row">
+                <div class="col-sm-6">
+                  <h2>Order List</h2>
+                </div>
+                <div class="col-sm-6 text-right">
+                  <a href="#addOrderModal" class="btn btn-success" data-toggle="modal">
+                    <i class="material-icons">&#xE147;</i> <span>Add New Order</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Order Table -->
+            <table class="table table-striped table-hover">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>Customer Name</th>
+                  <th>Menu Item</th>
+                  <th>Order Date</th>
+                  <th>Status</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>Rahul Sharma</td>
+                  <td>Paneer Tikka</td>
+                  <td>2024-09-15</td>
+                  <td><span class="badge bg-success">Delivered</span></td>
+                  <td>
+                    <a href="#editOrderModal" class="edit" data-toggle="modal">
+                      <i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i>
+                    </a>
+                    <a href="#deleteOrderModal" class="delete" data-toggle="modal">
+                      <i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i>
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>Anjali Verma</td>
+                  <td>Chicken Biryani</td>
+                  <td>2024-09-16</td>
+                  <td><span class="badge bg-warning">In Progress</span></td>
+                  <td>
+                    <a href="#editOrderModal" class="edit" data-toggle="modal">
+                      <i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i>
+                    </a>
+                    <a href="#deleteOrderModal" class="delete" data-toggle="modal">
+                      <i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i>
+                    </a>
+                  </td>
+                </tr>
+                <!-- More rows can be added here -->
+              </tbody>
+            </table>
+            <div class="clearfix">
+              <ul class="pagination">
+                <li class="page-item disabled"><a href="#">Previous</a></li>
+                <li class="page-item"><a href="#" class="page-link">1</a></li>
+                <li class="page-item"><a href="#" class="page-link">2</a></li>
+                <li class="page-item active"><a href="#" class="page-link">3</a></li>
+                <li class="page-item"><a href="#" class="page-link">Next</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="analyticsContent" class="content-section" style="display:none;">
+        <!-- Sales Analytics Content -->
+        <div class="container mt-4">
+          <h3>Sales Analytics</h3>
+      
+          <!-- Key Metrics -->
+          <div class="row">
+            <div class="col-md-4">
+              <div class="card text-center">
+                <div class="card-body">
+                  <h5 class="card-title">Total Sales</h5>
+                  <p class="card-text">$10,000</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card text-center">
+                <div class="card-body">
+                  <h5 class="card-title">Total Orders</h5>
+                  <p class="card-text">250</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card text-center">
+                <div class="card-body">
+                  <h5 class="card-title">Average Order Value</h5>
+                  <p class="card-text">$40</p>
+                </div>
+              </div>
+            </div>
+          </div>
+      
+          <!-- Sales Chart -->
+          <div class="mt-4">
+            <h4>Sales Over Time</h4>
+            <canvas id="salesChart"></canvas>
+          </div>
+      
+          <!-- Recent Sales Table -->
+          <div class="mt-4">
+            <h4>Recent Sales</h4>
+            <table class="table table-striped table-hover">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>Customer Name</th>
+                  <th>Menu Item</th>
+                  <th>Order Date</th>
+                  <th>Amount</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>Rahul Sharma</td>
+                  <td>Paneer Tikka</td>
+                  <td>2024-09-15</td>
+                  <td>$10.00</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>Anjali Verma</td>
+                  <td>Chicken Biryani</td>
+                  <td>2024-09-16</td>
+                  <td>$12.00</td>
+                </tr>
+                <!-- More rows can be added here -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      
+        <!-- Script for Sales Chart -->
+        
+      </div>
+      
+    </div>
+  </div>
+
+  <!-- jQuery, Bootstrap JS, and Custom JS -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/custom.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script>
+          var ctx = document.getElementById('salesChart').getContext('2d');
+          var salesChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+              labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+              datasets: [{
+                label: 'Sales ($)',
+                data: [1200, 1900, 3000, 500, 2000, 3000, 4000],
+                backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                borderColor: 'rgba(75, 192, 192, 1)',
+                borderWidth: 1
+              }]
+            },
+            options: {
+              scales: {
+                y: {
+                  beginAtZero: true
+                }
+              }
+            }
+          });
+        </script>
+  <script type="text/javascript">
+    $(document).ready(function () {
+      // Function to handle sidebar clicks
+      function showContent(sectionId) {
+        $('.content-section').hide(); // Hide all content sections
+        $('#' + sectionId).show(); // Show the targeted content section
+      }
+
+      // Event listeners for sidebar links
+      $('#dashboardLink').on('click', function (e) {
+        e.preventDefault();
+        showContent('dashboardContent');
+      });
+
+      $('#profileLink').on('click', function (e) {
+        e.preventDefault();
+        showContent('profileContent');
+      });
+
+      $('#menuLink').on('click', function (e) {
+        e.preventDefault();
+        showContent('menuContent');
+      });
+
+      $('#orderLink').on('click', function (e) {
+        e.preventDefault();
+        showContent('orderContent');
+      });
+
+      $('#analyticsLink').on('click', function (e) {
+        e.preventDefault();
+        showContent('analyticsContent');
+      });
+
+      // Show the default content (Dashboard)
+      showContent('dashboardContent');
+    });
+
+    $(document).ready(function(){
+	      $(".xp-menubar").on('click',function(){
+		    $("#sidebar").toggleClass('active');
+			$("#content").toggleClass('active');
+		  });
+		  
+		  $('.xp-menubar,.body-overlay').on('click',function(){
+		     $("#sidebar,.body-overlay").toggleClass('show-nav');
+		  });
+		  
+	   });
+  </script>
+</body>
+
+</html>
