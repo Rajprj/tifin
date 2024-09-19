@@ -160,27 +160,15 @@
 
 /*** Hero Header ***/
 .hero-header {
-    background: linear-gradient(rgba(15, 23, 43, .9), rgba(15, 23, 43, .9)), url(../img/bg-hero.jpg);
+    background: linear-gradient(rgba(14, 14, 15, 0.9), rgba(16, 17, 20, 0.9)), url(../img/demo.jpeg);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
-.hero-header img {
-    animation: imgRotate 50s linear infinite;
-}
-
-@keyframes imgRotate { 
-    100% { 
-        transform: rotate(360deg); 
-    } 
-}
-
 .breadcrumb-item + .breadcrumb-item::before {
     color: rgba(255, 255, 255, .5);
 }
-
-
 /*** Section Title ***/
 .section-title {
     position: relative;
