@@ -44,6 +44,9 @@
 				<li><a href="#" id="userManagementLink"><i class="material-icons">people</i>User Management</a></li>
 				<li><a href="#" id="renderManagementLink"><i class="material-icons">view_in_ar</i>Render Management</a>
 				</li>
+				<li><a href="#" id="volunteerManagementLink"><i class="material-icons">group</i>Volunteer Management</a></li>
+<li><a href="#" id="volunteerTaskLink"><i class="material-icons">assignment</i>Volunteer Tasks</a></li>
+
 				<li><a href="#" id="supportLink"><i class="material-icons">support</i>Support</a></li>
 				<li><a href="#" id="settingsLink"><i class="material-icons">settings</i>Settings</a></li>
 				<li><a href="#" id="logout"><i class="material-icons">logout</i>LogOut</a></li>
@@ -317,6 +320,101 @@
 						</div>
 					</div>
 				</div>
+<!-- Volunteer Management Content -->
+<div id="volunteerManagementContent" class="content-section" style="display: none;">
+    <div class="container mt-4">
+        <h3>Volunteer Management</h3>
+
+        <!-- Search Bar for Volunteers -->
+        <div class="mb-4">
+            <input type="text" class="form-control" id="searchVolunteer"
+                placeholder="Search Volunteers by name or email" />
+        </div>
+
+        <!-- Volunteer Table -->
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Volunteer ID</th>
+                    <th>Full Name</th>
+                    <th>Email</th>
+                    <th>Phone Number</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="volunteerTableBody">
+                <!-- Dynamic volunteer data will be inserted here -->
+                <tr>
+                    <td>1</td>
+                    <td>Emma Brown</td>
+                    <td>emma@example.com</td>
+                    <td>+1 234 567 8901</td>
+                    <td>
+                        <button class="btn btn-info btn-sm">View</button>
+                        <button class="btn btn-warning btn-sm">Edit</button>
+                        <button class="btn btn-danger btn-sm">Delete</button>
+                    </td>
+                </tr>
+                <!-- More volunteer rows as needed -->
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
+<!-- Volunteer Task Management Content -->
+<div id="volunteerTaskContent" class="content-section" style="display: none;">
+    <div class="container mt-4">
+        <h3>Volunteer Tasks</h3>
+
+        <!-- Assign Task Form -->
+        <div class="mb-4">
+            <h5>Assign Task to Volunteer</h5>
+            <form>
+                <div class="form-group">
+                    <label for="volunteerSelect">Select Volunteer</label>
+                    <select class="form-control" id="volunteerSelect">
+                        <option value="1">Emma Brown</option>
+                        <option value="2">John Doe</option>
+                        <!-- More volunteers as needed -->
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="taskDescription">Task Description</label>
+                    <textarea class="form-control" id="taskDescription" rows="3"
+                        placeholder="Describe the task"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Assign Task</button>
+            </form>
+        </div>
+
+        <!-- Volunteer Tasks Table -->
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Task ID</th>
+                    <th>Volunteer</th>
+                    <th>Description</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="volunteerTaskTableBody">
+                <tr>
+                    <td>1</td>
+                    <td>Emma Brown</td>
+                    <td>Deliver food to community center</td>
+                    <td>Pending</td>
+                    <td>
+                        <button class="btn btn-success btn-sm">Complete</button>
+                        <button class="btn btn-danger btn-sm">Cancel</button>
+                    </td>
+                </tr>
+                <!-- More task rows as needed -->
+            </tbody>
+        </table>
+    </div>
+</div>
 
 				<!-- Support Management Content Section -->
 				<!-- Support Management Content Section -->
@@ -516,9 +614,7 @@
 	<script src="js/jquery-3.3.1.min.js"></script>
 
 	<script type="text/javascript">
-
 		$(document).ready(function () {
-
 			// Sidebar toggle
 			$(".xp-menubar").on('click', function () {
 				$("#sidebar").toggleClass('active');
@@ -527,49 +623,60 @@
 			$('.xp-menubar,.body-overlay').on('click', function () {
 				$("#sidebar,.body-overlay").toggleClass('show-nav');
 			});
-
+	
 			// Function to handle showing the appropriate content section
 			function showContent(sectionId) {
 				$('.content-section').hide(); // Hide all content sections
 				$('#' + sectionId).show();    // Show the targeted content section
 			}
-
+	
 			// Event listeners for admin sidebar links
 			$('#dashboardLink').on('click', function (e) {
 				e.preventDefault();
 				showContent('dashboardContent');
 			});
-
+	
 			$('#userManagementLink').on('click', function (e) {
 				e.preventDefault();
 				showContent('userManagementContent');
 			});
-
+	
 			$('#renderManagementLink').on('click', function (e) {
 				e.preventDefault();
 				showContent('renderManagementContent');
 			});
-
+	
 			$('#supportLink').on('click', function (e) {
 				e.preventDefault();
 				showContent('supportManagementContent');
 			});
-
+	
 			$('#orderManagementLink').on('click', function (e) {
 				e.preventDefault();
 				showContent('orderManagementContent');
 			});
-
+	
 			$('#settingsLink').on('click', function (e) {
 				e.preventDefault();
 				showContent('settingsContent');
 			});
-
+	
+			// Add event listeners for the new sections
+			$('#volunteerManagementLink').on('click', function (e) {
+				e.preventDefault();
+				showContent('volunteerManagementContent');
+			});
+	
+			$('#volunteerTaskLink').on('click', function (e) {
+				e.preventDefault();
+				showContent('volunteerTaskContent');
+			});
+	
 			// Show the default content (Dashboard or any other)
 			showContent('dashboardContent'); // Show default section when page loads
 		});
-
 	</script>
+	
 
 </body>
 
